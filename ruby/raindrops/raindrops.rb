@@ -6,7 +6,7 @@ class Raindrops
   }
 
   def self.convert(number)
-    sound_sequence = CANDIDATES_TO_SOUNDS.select { |candidate, sound| number % candidate == 0 }
+    sound_sequence = CANDIDATES_TO_SOUNDS.select { |candidate| number % candidate == 0 }
                                          .values
                                          .join
 

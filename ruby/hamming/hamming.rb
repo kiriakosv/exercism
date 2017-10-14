@@ -1,7 +1,8 @@
+#:nodoc:
 class Hamming
-  def self.compute(sequence_1, sequence_2)
-    raise ArgumentError unless sequence_1.length == sequence_2.length
-    
-    (0...sequence_1.length).count { |i| sequence_1[i] != sequence_2[i] }
+  def self.compute(sequence_one, sequence_two)
+    raise ArgumentError unless sequence_one.length == sequence_two.length
+
+    (0...sequence_one.length).count { |i| sequence_one[i] != sequence_two[i] }
   end
 end

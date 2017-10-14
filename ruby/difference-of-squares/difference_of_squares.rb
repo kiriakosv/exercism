@@ -1,14 +1,15 @@
+#:nodoc:
 class Squares
   def initialize(number)
     @number = number
   end
 
   def square_of_sum
-    (0..@number).inject(:+) ** 2
+    (0..@number).inject(:+)**2
   end
 
   def sum_of_squares
-    (0..@number).inject { |sum, n| sum + n ** 2 }
+    (0..@number).inject { |sum, n| sum + n**2 }
   end
 
   def difference

@@ -1,6 +1,7 @@
+#:nodoc:
 class Gigasecond
-  GIGASECOND = 10 ** 9
-  
+  GIGASECOND = 10**9
+
   def self.from(instant)
     instant + GIGASECOND
   end

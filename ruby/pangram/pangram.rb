@@ -1,11 +1,12 @@
+#:nodoc:
 module Pangram
   ALPHABET_LENGTH = 26
-  
+
   def self.pangram?(sentence)
     letters = sentence.downcase
-                      .split("")
+                      .split('')
                       .select { |l| l =~ /[a-z]/ }
-                      
+
     letters.uniq.size == ALPHABET_LENGTH
   end
 end

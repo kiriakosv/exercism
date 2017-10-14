@@ -1,3 +1,4 @@
+#:nodoc:
 module Complement
   def self.of_dna(strand)
     return '' unless strand =~ /^[GCTA]+$/

@@ -1,15 +1,19 @@
+# frozen_string_literal: true
+
 #:nodoc:
 class Squares
-  def initialize(number)
-    @number = number
+  def initialize(upper_limit)
+    raise ArgumentError unless upper_limit.positive?
+
+    @upper_limit = upper_limit
   end
 
   def square_of_sum
-    (0..@number).inject(:+)**2
+    (@upper_limit * (@upper_limit + 1) / 2)**2
   end
 
   def sum_of_squares
-    (0..@number).inject { |sum, n| sum + n**2 }
+    @upper_limit * (@upper_limit + 1) * (2 * @upper_limit + 1) / 6
   end
 
   def difference

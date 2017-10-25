@@ -2,10 +2,10 @@
 module Grains
   NUMBER_OF_SQUARES = 64
 
-  def self.square(number)
-    raise ArgumentError unless number.between?(1, NUMBER_OF_SQUARES)
+  def self.square(position)
+    raise ArgumentError unless position.between?(1, NUMBER_OF_SQUARES)
 
-    2**(number - 1)
+    2**(position - 1)
   end
 
   def self.total

@@ -5,9 +5,8 @@ class Phrase
   end
 
   def word_count
-    regex = /\b[\w']+\b/
     @phrase.downcase
-           .scan(regex)
+           .scan(/\b[\w']+\b/)
            .each_with_object(Hash.new(0)) { |word, counter| counter[word] += 1 }
   end
 end
